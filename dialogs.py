@@ -85,7 +85,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
 
         print _("_Non-stock button"),type(_("_Non-stock button"))
         dialog = gtk.Dialog(_("Interactive Dialog"), self, 0,
-                (gtk.STOCK_OK, gtk.RESPONSE_OK,
+                (gtk.STOCK_YES, gtk.RESPONSE_OK,
                 _("_Non-stock button"), gtk.RESPONSE_CANCEL))
 
         hbox = gtk.HBox(False, 8)
