@@ -6,46 +6,50 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PythonWinter 2015-gettext\n"
-"POT-Creation-Date: 2015-05-07 18:08+MSK\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-08 00:22+0300\n"
 "PO-Revision-Date: 2015-05-07 18:29+0300\n"
 "Last-Translator: Fr. Br. George <george@altlinux.org>\n"
 "Language-Team: Russian\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
-"Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: dialogs.py:26
+#: dialogs.py:32
 msgid "Dialogs"
 msgstr "Диалоги"
 
-#: dialogs.py:36
+#: dialogs.py:42
 msgid "_Message Dialog"
 msgstr "_Диалог сообщение"
 
-#: dialogs.py:46
+#: dialogs.py:52
 msgid "_Interactive Dialog"
 msgstr "_Интерактивный диалог"
 
-#: dialogs.py:56 dialogs.py:105
+#: dialogs.py:62 dialogs.py:114
 msgid "Entry _1"
 msgstr "Поле _1"
 
-#: dialogs.py:64 dialogs.py:113
+#: dialogs.py:70 dialogs.py:122
 msgid "Entry _2"
 msgstr "Поле _2"
 
-#: dialogs.py:78
-msgid "This message box has been popped up %d time%s."
-msgstr "Это сообщение было показано %d раз%s."
+#: dialogs.py:81
+msgid "This message box has been popped up {} time."
+msgid_plural "This message box has been popped up {} times."
+msgstr[0] "Это сообщение было показано {} раз."
+msgstr[1] "Это сообщение было показано {} раза."
+msgstr[2] "Это сообщение было показано {} раз."
 
-#: dialogs.py:86 dialogs.py:89
-msgid "_Non-stock button"
-msgstr "_Нестандартная кнопка"
-
-#: dialogs.py:87
+#: dialogs.py:96
 msgid "Interactive Dialog"
 msgstr "Интерактивный Диалог"
+
+#: dialogs.py:98
+msgid "_Non-stock button"
+msgstr "_Нестандартная кнопка"
