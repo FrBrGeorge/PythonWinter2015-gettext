@@ -7,6 +7,9 @@ import pygtk
 pygtk.require('2.0')
 import gtk
 
+import gettext
+gettext.install('dialogs')
+
 class DialogAndMessageBoxesDemo(gtk.Window):
     counter = 1
     def __init__(self, parent=None):
@@ -20,7 +23,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         self.set_title(self.__class__.__name__)
         self.set_border_width(8)
 
-        frame = gtk.Frame("Dialogs")
+        frame = gtk.Frame(_("Dialogs"))
         self.add(frame)
 
         vbox = gtk.VBox(False, 8)
@@ -30,7 +33,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         # Standard message dialog
         hbox = gtk.HBox(False, 8)
         vbox.pack_start(hbox)
-        button = gtk.Button("_Message Dialog")
+        button = gtk.Button(_("_Message Dialog"))
         button.connect('clicked', self.on_message_dialog_clicked)
         hbox.pack_start(button, False, False, 0)
         vbox.pack_start(gtk.HSeparator(), False, False, 0)
@@ -40,7 +43,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         vbox.pack_start(hbox, False, False, 0)
         vbox2 = gtk.VBox()
 
-        button = gtk.Button("_Interactive Dialog")
+        button = gtk.Button(_("_Interactive Dialog"))
         button.connect('clicked', self.on_interactive_dialog_clicked)
         hbox.pack_start(vbox2, False, False, 0)
         vbox2.pack_start(button, False, False, 0)
@@ -50,7 +53,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         table.set_col_spacings(4)
         hbox.pack_start(table, False, False, 0)
 
-        label = gtk.Label("Entry _1")
+        label = gtk.Label(_("Entry _1"))
         label.set_use_underline(True)
         table.attach(label, 0, 1, 0, 1)
 
@@ -58,7 +61,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         table.attach(self.entry1, 1, 2, 0, 1)
         label.set_mnemonic_widget(self.entry1)
 
-        label = gtk.Label("Entry _2")
+        label = gtk.Label(_("Entry _2"))
         label.set_use_underline(True)
         table.attach(label, 0, 1, 1, 2)
 
@@ -72,7 +75,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         dialog = gtk.MessageDialog(self,
                 gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
                 gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
-                "This message box has been popped up %d time%s." %
+                _("This message box has been popped up %d time%s.") %
                         (self.counter, self.counter > 1 and 's' or ''))
         dialog.run()
         dialog.destroy()
@@ -80,9 +83,10 @@ class DialogAndMessageBoxesDemo(gtk.Window):
 
     def on_interactive_dialog_clicked(self, button):
 
-        dialog = gtk.Dialog("Interactive Dialog", self, 0,
+        print _("_Non-stock button"),type(_("_Non-stock button"))
+        dialog = gtk.Dialog(_("Interactive Dialog"), self, 0,
                 (gtk.STOCK_OK, gtk.RESPONSE_OK,
-                "_Non-stock button", gtk.RESPONSE_CANCEL))
+                _("_Non-stock button"), gtk.RESPONSE_CANCEL))
 
         hbox = gtk.HBox(False, 8)
         hbox.set_border_width(8)
@@ -98,7 +102,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         table.set_col_spacings(4)
         hbox.pack_start(table, True, True, 0)
 
-        label = gtk.Label("Entry _1")
+        label = gtk.Label(_("Entry _1"))
         label.set_use_underline(True)
         table.attach(label, 0, 1, 0, 1)
         local_entry1 = gtk.Entry()
@@ -106,7 +110,7 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         table.attach(local_entry1, 1, 2, 0, 1)
         label.set_mnemonic_widget(local_entry1)
 
-        label = gtk.Label("Entry _2")
+        label = gtk.Label(_("Entry _2"))
         label.set_use_underline(True)
         table.attach(label, 0, 1, 1, 2)
         local_entry2 = gtk.Entry()
