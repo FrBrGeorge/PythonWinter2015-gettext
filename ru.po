@@ -1,0 +1,51 @@
+# Russian translations for PythonWinter package
+# Английские переводы для пакета PythonWinter.
+# Copyright (C) 2015 ORGANIZATION
+# Fr. Br. George <george@altlinux.org>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PythonWinter 2015-gettext\n"
+"POT-Creation-Date: 2015-05-07 18:08+MSK\n"
+"PO-Revision-Date: 2015-05-07 18:29+0300\n"
+"Last-Translator: Fr. Br. George <george@altlinux.org>\n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: dialogs.py:26
+msgid "Dialogs"
+msgstr ""
+
+#: dialogs.py:36
+msgid "_Message Dialog"
+msgstr ""
+
+#: dialogs.py:46
+msgid "_Interactive Dialog"
+msgstr ""
+
+#: dialogs.py:56 dialogs.py:105
+msgid "Entry _1"
+msgstr ""
+
+#: dialogs.py:64 dialogs.py:113
+msgid "Entry _2"
+msgstr ""
+
+#: dialogs.py:78
+msgid "This message box has been popped up %d time%s."
+msgstr ""
+
+#: dialogs.py:86 dialogs.py:89
+msgid "_Non-stock button"
+msgstr ""
+
+#: dialogs.py:87
+msgid "Interactive Dialog"
+msgstr ""
