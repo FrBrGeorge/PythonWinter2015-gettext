@@ -14,7 +14,7 @@ bindir = os.path.realpath(sys.argv[0])
 for localedir in bindir,None,".":
     localefile = gettext.find('dialogs',localedir)
     if localefile: break
-gettext.install('dialogs',localedir)
+gettext.install('dialogs',localedir,names=("ngettext",))
 
 class DialogAndMessageBoxesDemo(gtk.Window):
     counter = 1
@@ -78,11 +78,15 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         self.show_all()
 
     def on_message_dialog_clicked(self, button):
+        msg = ngettext("This message box has been popped up {} time.",
+                       "This message box has been popped up {} times.",
+                       self.counter\
+                      ).format(self.counter)
+
         dialog = gtk.MessageDialog(self,
                 gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
                 gtk.MESSAGE_INFO, gtk.BUTTONS_OK,
-                _("This message box has been popped up %d time%s.") %
-                        (self.counter, self.counter > 1 and 's' or ''))
+                msg.format(self.counter))
         dialog.run()
         dialog.destroy()
         self.counter += 1
