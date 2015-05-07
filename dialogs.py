@@ -6,9 +6,15 @@ Dialog widgets are used to pop up a transient window for user feedback."""
 import pygtk
 pygtk.require('2.0')
 import gtk
+import sys
+import os
 
 import gettext
-gettext.install('dialogs')
+bindir = os.path.realpath(sys.argv[0])
+for localedir in bindir,None,".":
+    localefile = gettext.find('dialogs',localedir)
+    if localefile: break
+gettext.install('dialogs',localedir)
 
 class DialogAndMessageBoxesDemo(gtk.Window):
     counter = 1
@@ -83,7 +89,6 @@ class DialogAndMessageBoxesDemo(gtk.Window):
 
     def on_interactive_dialog_clicked(self, button):
 
-        print _("_Non-stock button"),type(_("_Non-stock button"))
         dialog = gtk.Dialog(_("Interactive Dialog"), self, 0,
                 (gtk.STOCK_YES, gtk.RESPONSE_OK,
                 _("_Non-stock button"), gtk.RESPONSE_CANCEL))

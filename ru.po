@@ -20,32 +20,32 @@ msgstr ""
 
 #: dialogs.py:26
 msgid "Dialogs"
-msgstr ""
+msgstr "Диалоги"
 
 #: dialogs.py:36
 msgid "_Message Dialog"
-msgstr ""
+msgstr "_Диалог сообщение"
 
 #: dialogs.py:46
 msgid "_Interactive Dialog"
-msgstr ""
+msgstr "_Интерактивный диалог"
 
 #: dialogs.py:56 dialogs.py:105
 msgid "Entry _1"
-msgstr ""
+msgstr "Поле _1"
 
 #: dialogs.py:64 dialogs.py:113
 msgid "Entry _2"
-msgstr ""
+msgstr "Поле _2"
 
 #: dialogs.py:78
 msgid "This message box has been popped up %d time%s."
-msgstr ""
+msgstr "Это сообщение было показано %d раз%s."
 
 #: dialogs.py:86 dialogs.py:89
 msgid "_Non-stock button"
-msgstr ""
+msgstr "_Нестандартная кнопка"
 
 #: dialogs.py:87
 msgid "Interactive Dialog"
-msgstr ""
+msgstr "Интерактивный Диалог"
