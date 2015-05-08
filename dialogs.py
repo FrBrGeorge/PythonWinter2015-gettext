@@ -16,6 +16,14 @@ for localedir in bindir,None:
     if localefile: break
 gettext.install('dialogs',localedir,names=("ngettext",))
 
+flagfile = _("en.png")
+
+for datadir in os.path.join(localedir,"..","dialogs"), \
+               os.path.join(bindir,"..","share","dialogs"), \
+               bindir:
+    if os.path.isfile(os.path.join(datadir,flagfile)):
+        break
+
 class DialogAndMessageBoxesDemo(gtk.Window):
     counter = 1
     def __init__(self, parent=None):
@@ -43,6 +51,10 @@ class DialogAndMessageBoxesDemo(gtk.Window):
         button.connect('clicked', self.on_message_dialog_clicked)
         hbox.pack_start(button, False, False, 0)
         vbox.pack_start(gtk.HSeparator(), False, False, 0)
+        
+        # Flag
+        flag = gtk.image_new_from_file(flagfile)
+        hbox.pack_start(flag, False, False, 0)
 
         # Interactive dialog
         hbox = gtk.HBox(False, 8)
