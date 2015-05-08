@@ -11,16 +11,14 @@ import os
 
 import gettext
 bindir = os.path.dirname(os.path.realpath(sys.argv[0]))
-for localedir in bindir,None:
+for localedir in bindir, None:
     localefile = gettext.find('dialogs',localedir)
     if localefile: break
 gettext.install('dialogs',localedir,names=("ngettext",))
 
 flagfile = _("en.png")
 
-for datadir in os.path.join(localedir,"..","dialogs"), \
-               os.path.join(bindir,"..","share","dialogs"), \
-               bindir:
+for datadir in os.path.join(bindir,"..","share","dialogs"), bindir:
     if os.path.isfile(os.path.join(datadir,flagfile)):
         break
 

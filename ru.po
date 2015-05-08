@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PythonWinter 2015-gettext\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-08 00:22+0300\n"
+"POT-Creation-Date: 2015-05-08 11:35+0300\n"
 "PO-Revision-Date: 2015-05-07 18:29+0300\n"
 "Last-Translator: Fr. Br. George <george@altlinux.org>\n"
 "Language-Team: Russian\n"
@@ -19,37 +19,41 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: dialogs.py:32
+#: dialogs.py:19
+msgid "en.png"
+msgstr "ru.png"
+
+#: dialogs.py:40
 msgid "Dialogs"
 msgstr "Диалоги"
 
-#: dialogs.py:42
+#: dialogs.py:50
 msgid "_Message Dialog"
-msgstr "_Диалог сообщение"
+msgstr "_Диалог-сообщение"
 
-#: dialogs.py:52
+#: dialogs.py:64
 msgid "_Interactive Dialog"
 msgstr "_Интерактивный диалог"
 
-#: dialogs.py:62 dialogs.py:114
+#: dialogs.py:74 dialogs.py:126
 msgid "Entry _1"
 msgstr "Поле _1"
 
-#: dialogs.py:70 dialogs.py:122
+#: dialogs.py:82 dialogs.py:134
 msgid "Entry _2"
 msgstr "Поле _2"
 
-#: dialogs.py:81
+#: dialogs.py:93
 msgid "This message box has been popped up {} time."
 msgid_plural "This message box has been popped up {} times."
 msgstr[0] "Это сообщение было показано {} раз."
 msgstr[1] "Это сообщение было показано {} раза."
 msgstr[2] "Это сообщение было показано {} раз."
 
-#: dialogs.py:96
+#: dialogs.py:108
 msgid "Interactive Dialog"
 msgstr "Интерактивный Диалог"
 
-#: dialogs.py:98
+#: dialogs.py:110
 msgid "_Non-stock button"
 msgstr "_Нестандартная кнопка"
