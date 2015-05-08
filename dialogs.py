@@ -10,8 +10,8 @@ import sys
 import os
 
 import gettext
-bindir = os.path.realpath(sys.argv[0])
-for localedir in bindir,None,".":
+bindir = os.path.dirname(os.path.realpath(sys.argv[0]))
+for localedir in bindir,None:
     localefile = gettext.find('dialogs',localedir)
     if localefile: break
 gettext.install('dialogs',localedir,names=("ngettext",))
